@@ -1,0 +1,3 @@
+---
+- name: Install for debian
+  include: "{{ ansible_distribution }}.yml"

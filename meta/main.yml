@@ -1,0 +1,20 @@
+galaxy_info:
+  author: kjartab
+  description: Dotnetcore for Centos/RedHat
+  company: Norkart AS
+
+  license: "license (BSD, MIT)"
+  
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  - name: Ubuntu
+    versions:
+    - xenial
+    
+  galaxy_tags: []
+
+dependencies: []

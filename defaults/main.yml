@@ -1,0 +1,12 @@
+---
+# defaults file for ansible-role-dotnetcore
+dotnet:
+  branch: "-dev" 
+  version:
+    major: 1
+    minor: 0
+    patch: 0
+    release: preview2-003121
+
+
+- apt: name=dotnet-dev-1.0.0-preview2-003121 update_cache=yes 

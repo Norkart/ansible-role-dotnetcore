@@ -1,0 +1,16 @@
+---
+- name: Add apt key
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: 417A0893
+    state: present
+
+- name: Add repository
+  apt_repository:
+    repo: deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ {{ansible_distribution_major_version}} main
+    state: present
+
+- name: Install dotnet core
+  apt: 
+    name: dotnet{{dotnet.branch}}-{{dotnet.version.major}}.{{dotnet.version.mainor}}.{{dotnet.version.patch}}{{dotnet.version.release}} 
+    update_cache: yes
