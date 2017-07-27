@@ -12,5 +12,5 @@
 
 - name: Install dotnet core
   apt: 
-    name: dotnet{{dotnet.branch}}-{{dotnet.version.major}}.{{dotnet.version.mainor}}.{{dotnet.version.patch}}{{dotnet.version.release}} 
+    name: dotnet{{dotnet.branch}}-{{dotnet.version.major}}.{{dotnet.version.mainor}}.{{dotnet.version.patch}}
     update_cache: yes
