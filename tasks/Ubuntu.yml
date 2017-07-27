@@ -7,10 +7,10 @@
 
 - name: Add repository
   apt_repository:
-    repo: deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ {{ansible_distribution_major_version}} main
+    repo: deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ {{ansible_distribution_release}} main
     state: present
 
 - name: Install dotnet core
   apt: 
-    name: dotnet{{dotnet.branch}}-{{dotnet.version.major}}.{{dotnet.version.mainor}}.{{dotnet.version.patch}}
+    name: dotnet{{dotnet.branch}}-{{dotnet.version.major}}.{{dotnet.version.minor}}.{{dotnet.version.patch}}
     update_cache: yes
